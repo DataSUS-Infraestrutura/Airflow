@@ -1,0 +1,17 @@
+[2024-08-07T15:39:53.966-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:39:53.979-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.atlas_connection manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:39:53.986-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.atlas_connection manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:39:53.986-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:39:54.004-0300] {taskinstance.py:2330} INFO - Executing <Task(AtlasConnectionCheckOperator): atlas_connection> on 2024-08-07 18:36:41.214615+00:00
+[2024-08-07T15:39:54.009-0300] {standard_task_runner.py:63} INFO - Started process 13578 to run task
+[2024-08-07T15:39:54.012-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'atlas_connection', 'manual__2024-08-07T18:36:41.214615+00:00', '--job-id', '1053', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmpz5ggvc3k']
+[2024-08-07T15:39:54.014-0300] {standard_task_runner.py:91} INFO - Job 1053: Subtask atlas_connection
+[2024-08-07T15:39:54.050-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.atlas_connection manual__2024-08-07T18:36:41.214615+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:39:54.116-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='atlas_connection' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T18:36:41.214615+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T18:36:41.214615+00:00'
+[2024-08-07T15:39:54.117-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:39:54.222-0300] {ETL_DO.py:32} INFO - Conexão bem-sucedida com o Apache Atlas.
+[2024-08-07T15:39:54.222-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:39:54.227-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=atlas_connection, run_id=manual__2024-08-07T18:36:41.214615+00:00, execution_date=20240807T183641, start_date=20240807T183953, end_date=20240807T183954
+[2024-08-07T15:39:54.265-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:39:54.285-0300] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:39:54.294-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

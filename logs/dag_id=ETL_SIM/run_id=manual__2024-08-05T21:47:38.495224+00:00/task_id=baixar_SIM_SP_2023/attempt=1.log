@@ -1,0 +1,20 @@
+[2024-08-05T18:48:08.585-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T18:48:08.600-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_SP_2023 manual__2024-08-05T21:47:38.495224+00:00 [queued]>
+[2024-08-05T18:48:08.606-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_SP_2023 manual__2024-08-05T21:47:38.495224+00:00 [queued]>
+[2024-08-05T18:48:08.606-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-05T18:48:08.620-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIM_SP_2023> on 2024-08-05 21:47:38.495224+00:00
+[2024-08-05T18:48:08.624-0300] {standard_task_runner.py:63} INFO - Started process 50198 to run task
+[2024-08-05T18:48:08.628-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'baixar_SIM_SP_2023', 'manual__2024-08-05T21:47:38.495224+00:00', '--job-id', '999', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmp0hfsrafn']
+[2024-08-05T18:48:08.629-0300] {standard_task_runner.py:91} INFO - Job 999: Subtask baixar_SIM_SP_2023
+[2024-08-05T18:48:08.668-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.baixar_SIM_SP_2023 manual__2024-08-05T21:47:38.495224+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-05T18:48:08.943-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='baixar_SIM_SP_2023' AIRFLOW_CTX_EXECUTION_DATE='2024-08-05T21:47:38.495224+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-05T21:47:38.495224+00:00'
+[2024-08-05T18:48:08.944-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T18:48:11.003-0300] {logging_mixin.py:188} WARNING - 0it [00:00, ?it/s]
+[2024-08-05T18:48:11.004-0300] {logging_mixin.py:188} WARNING - 0it [00:00, ?it/s]
+[2024-08-05T18:48:11.004-0300] {logging_mixin.py:188} INFO - Dados para a UF SP e ano 2023: {'SP': []}
+[2024-08-05T18:48:11.004-0300] {python.py:237} INFO - Done. Returned value was: {'SP': []}
+[2024-08-05T18:48:11.004-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T18:48:11.025-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=baixar_SIM_SP_2023, run_id=manual__2024-08-05T21:47:38.495224+00:00, execution_date=20240805T214738, start_date=20240805T214808, end_date=20240805T214811
+[2024-08-05T18:48:11.053-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-05T18:48:11.075-0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T18:48:11.075-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

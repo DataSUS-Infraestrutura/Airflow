@@ -1,0 +1,89 @@
+[2024-08-07T15:31:56.568-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:31:56.584-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_RJ_2020 scheduled__2024-08-06T00:00:00+00:00 [queued]>
+[2024-08-07T15:31:56.592-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_RJ_2020 scheduled__2024-08-06T00:00:00+00:00 [queued]>
+[2024-08-07T15:31:56.593-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:31:56.618-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIM_RJ_2020> on 2024-08-06 00:00:00+00:00
+[2024-08-07T15:31:56.622-0300] {standard_task_runner.py:63} INFO - Started process 5782 to run task
+[2024-08-07T15:31:56.627-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'baixar_SIM_RJ_2020', 'scheduled__2024-08-06T00:00:00+00:00', '--job-id', '1043', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmped1oyibq']
+[2024-08-07T15:31:56.629-0300] {standard_task_runner.py:91} INFO - Job 1043: Subtask baixar_SIM_RJ_2020
+[2024-08-07T15:31:56.670-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.baixar_SIM_RJ_2020 scheduled__2024-08-06T00:00:00+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:31:56.940-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='baixar_SIM_RJ_2020' AIRFLOW_CTX_EXECUTION_DATE='2024-08-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-06T00:00:00+00:00'
+[2024-08-07T15:31:56.941-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:31:58.902-0300] {logging_mixin.py:188} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2024-08-07T15:31:58.903-0300] {logging_mixin.py:188} WARNING -   0%|          | 0.00/13.8M [00:00<?, ?B/s]
+[2024-08-07T15:31:58.903-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   0%|          | 0.00/13.8M [00:00<?, ?B/s]
+[2024-08-07T15:31:59.416-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   0%|          | 5.79k/13.8M [00:00<20:25, 11.3kB/s]
+[2024-08-07T15:31:59.536-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   0%|          | 25.6k/13.8M [00:00<04:38, 49.7kB/s]
+[2024-08-07T15:31:59.658-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   0%|          | 66.1k/13.8M [00:00<01:50, 125kB/s] 
+[2024-08-07T15:31:59.779-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   1%|          | 130k/13.8M [00:00<00:58, 235kB/s] 
+[2024-08-07T15:31:59.900-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   2%|1         | 222k/13.8M [00:00<00:35, 383kB/s]
+[2024-08-07T15:32:00.022-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   3%|2         | 372k/13.8M [00:01<00:21, 629kB/s]
+[2024-08-07T15:32:00.148-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   4%|4         | 585k/13.8M [00:01<00:14, 944kB/s]
+[2024-08-07T15:32:00.273-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   6%|5         | 795k/13.8M [00:01<00:11, 1.16MB/s]
+[2024-08-07T15:32:00.401-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   8%|7         | 1.06M/13.8M [00:01<00:08, 1.43MB/s]
+[2024-08-07T15:32:00.529-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  10%|9         | 1.32M/13.8M [00:01<00:07, 1.62MB/s]
+[2024-08-07T15:32:00.658-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  11%|#1        | 1.58M/13.8M [00:01<00:07, 1.74MB/s]
+[2024-08-07T15:32:00.794-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  13%|#3        | 1.84M/13.8M [00:01<00:06, 1.81MB/s]
+[2024-08-07T15:32:00.942-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  15%|#5        | 2.11M/13.8M [00:02<00:06, 1.79MB/s]
+[2024-08-07T15:32:01.083-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  17%|#7        | 2.37M/13.8M [00:02<00:06, 1.82MB/s]
+[2024-08-07T15:32:01.213-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  19%|#8        | 2.63M/13.8M [00:02<00:05, 1.87MB/s]
+[2024-08-07T15:32:01.341-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  21%|##        | 2.89M/13.8M [00:02<00:05, 1.92MB/s]
+[2024-08-07T15:32:01.477-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  23%|##2       | 3.15M/13.8M [00:02<00:05, 1.92MB/s]
+[2024-08-07T15:32:01.615-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  25%|##4       | 3.42M/13.8M [00:02<00:05, 1.91MB/s]
+[2024-08-07T15:32:01.759-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  27%|##6       | 3.68M/13.8M [00:02<00:05, 1.89MB/s]
+[2024-08-07T15:32:01.887-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  28%|##8       | 3.94M/13.8M [00:02<00:05, 1.93MB/s]
+[2024-08-07T15:32:02.018-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  30%|###       | 4.20M/13.8M [00:03<00:04, 1.96MB/s]
+[2024-08-07T15:32:02.159-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  32%|###2      | 4.46M/13.8M [00:03<00:04, 1.93MB/s]
+[2024-08-07T15:32:02.295-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  34%|###4      | 4.73M/13.8M [00:03<00:04, 1.92MB/s]
+[2024-08-07T15:32:02.429-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  36%|###6      | 4.99M/13.8M [00:03<00:04, 1.93MB/s]
+[2024-08-07T15:32:02.565-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  38%|###7      | 5.25M/13.8M [00:03<00:04, 1.93MB/s]
+[2024-08-07T15:32:02.708-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  40%|###9      | 5.51M/13.8M [00:03<00:04, 1.91MB/s]
+[2024-08-07T15:32:02.838-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  42%|####1     | 5.77M/13.8M [00:03<00:04, 1.92MB/s]
+[2024-08-07T15:32:02.975-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  44%|####3     | 6.04M/13.8M [00:04<00:04, 1.93MB/s]
+[2024-08-07T15:32:03.107-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  45%|####5     | 6.30M/13.8M [00:04<00:03, 1.95MB/s]
+[2024-08-07T15:32:03.237-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  47%|####7     | 6.56M/13.8M [00:04<00:03, 1.96MB/s]
+[2024-08-07T15:32:03.368-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  49%|####9     | 6.82M/13.8M [00:04<00:03, 1.98MB/s]
+[2024-08-07T15:32:03.506-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  51%|#####1    | 7.09M/13.8M [00:04<00:03, 1.95MB/s]
+[2024-08-07T15:32:03.656-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  53%|#####3    | 7.35M/13.8M [00:04<00:03, 1.90MB/s]
+[2024-08-07T15:32:03.792-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  55%|#####4    | 7.61M/13.8M [00:04<00:03, 1.89MB/s]
+[2024-08-07T15:32:03.930-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  57%|#####6    | 7.87M/13.8M [00:05<00:03, 1.89MB/s]
+[2024-08-07T15:32:04.064-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  59%|#####8    | 8.13M/13.8M [00:05<00:02, 1.91MB/s]
+[2024-08-07T15:32:04.209-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  61%|######    | 8.40M/13.8M [00:05<00:02, 1.89MB/s]
+[2024-08-07T15:32:04.346-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  63%|######2   | 8.66M/13.8M [00:05<00:02, 1.89MB/s]
+[2024-08-07T15:32:04.472-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  64%|######4   | 8.92M/13.8M [00:05<00:02, 1.94MB/s]
+[2024-08-07T15:32:04.607-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  66%|######6   | 9.18M/13.8M [00:05<00:02, 1.94MB/s]
+[2024-08-07T15:32:04.738-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  68%|######8   | 9.45M/13.8M [00:05<00:02, 1.96MB/s]
+[2024-08-07T15:32:04.869-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  70%|#######   | 9.71M/13.8M [00:05<00:02, 1.98MB/s]
+[2024-08-07T15:32:05.013-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  72%|#######2  | 9.97M/13.8M [00:06<00:02, 1.92MB/s]
+[2024-08-07T15:32:05.146-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  74%|#######3  | 10.2M/13.8M [00:06<00:01, 1.94MB/s]
+[2024-08-07T15:32:05.279-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  76%|#######5  | 10.5M/13.8M [00:06<00:01, 1.94MB/s]
+[2024-08-07T15:32:05.417-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  78%|#######7  | 10.8M/13.8M [00:06<00:01, 1.93MB/s]
+[2024-08-07T15:32:05.558-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  80%|#######9  | 11.0M/13.8M [00:06<00:01, 1.91MB/s]
+[2024-08-07T15:32:05.692-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  81%|########1 | 11.3M/13.8M [00:06<00:01, 1.93MB/s]
+[2024-08-07T15:32:05.825-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  83%|########3 | 11.5M/13.8M [00:06<00:01, 1.94MB/s]
+[2024-08-07T15:32:05.965-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  85%|########5 | 11.8M/13.8M [00:07<00:01, 1.92MB/s]
+[2024-08-07T15:32:06.099-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  87%|########7 | 12.1M/13.8M [00:07<00:00, 1.93MB/s]
+[2024-08-07T15:32:06.238-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  89%|########9 | 12.3M/13.8M [00:07<00:00, 1.91MB/s]
+[2024-08-07T15:32:06.370-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  91%|######### | 12.6M/13.8M [00:07<00:00, 1.94MB/s]
+[2024-08-07T15:32:06.502-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  93%|#########2| 12.9M/13.8M [00:07<00:00, 1.95MB/s]
+[2024-08-07T15:32:06.639-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  95%|#########4| 13.1M/13.8M [00:07<00:00, 1.94MB/s]
+[2024-08-07T15:32:06.770-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  97%|#########6| 13.4M/13.8M [00:07<00:00, 1.96MB/s]
+[2024-08-07T15:32:06.920-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:  99%|#########8| 13.6M/13.8M [00:08<00:00, 1.89MB/s]
+[2024-08-07T15:32:07.050-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc: 100%|##########| 13.8M/13.8M [00:08<00:00, 1.80MB/s]
+[2024-08-07T15:32:07.051-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbc:   0%|          | 0.00/1.00 [00:00<?, ?B/s]          
+[2024-08-07T15:32:07.051-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbf:   0%|          | 0.00/1.00 [00:00<?, ?B/s]
+[2024-08-07T15:32:07.597-0300] {logging_mixin.py:188} WARNING - DORJ2020.dbf:   0%|          | 0.00/422k [00:00<?, ?B/s]
+[2024-08-07T15:32:07.597-0300] {logging_mixin.py:188} WARNING - DORJ2020.parquet:   0%|          | 0.00/422k [00:00<?, ?B/s]
+[2024-08-07T15:32:18.915-0300] {logging_mixin.py:188} WARNING - DORJ2020.parquet:  21%|##1       | 90.0k/422k [00:11<00:41, 7.95kB/s]
+[2024-08-07T15:32:19.317-0300] {logging_mixin.py:188} WARNING - DORJ2020.parquet:  28%|##8       | 120k/422k [00:11<00:29, 10.2kB/s] 
+[2024-08-07T15:32:22.968-0300] {logging_mixin.py:188} WARNING - DORJ2020.parquet:  36%|###5      | 150k/422k [00:15<00:28, 9.62kB/s]
+[2024-08-07T15:32:26.054-0300] {logging_mixin.py:188} WARNING - DORJ2020.parquet:  43%|####2     | 180k/422k [00:18<00:25, 9.65kB/s]
+[2024-08-07T15:32:27.802-0300] {logging_mixin.py:188} WARNING - DORJ2020.parquet: 100%|##########| 422k/422k [00:20<00:00, 32.8kB/s]
+[2024-08-07T15:32:27.907-0300] {logging_mixin.py:188} WARNING - DORJ2020.parquet: 100%|##########| 422k/422k [00:20<00:00, 20.8kB/s]
+[2024-08-07T15:32:27.907-0300] {logging_mixin.py:188} INFO - Erro ao processar UF RJ e ano 2020: 'ParquetSet' object is not iterable
+[2024-08-07T15:32:27.908-0300] {python.py:237} INFO - Done. Returned value was: {'RJ': None}
+[2024-08-07T15:32:27.908-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:32:27.927-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=baixar_SIM_RJ_2020, run_id=scheduled__2024-08-06T00:00:00+00:00, execution_date=20240806T000000, start_date=20240807T183156, end_date=20240807T183227
+[2024-08-07T15:32:28.004-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:32:28.029-0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:32:28.030-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

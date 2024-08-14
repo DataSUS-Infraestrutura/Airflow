@@ -1,0 +1,21 @@
+[2024-08-07T15:29:31.320-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:29:31.335-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_ES_2020 scheduled__2024-08-06T00:00:00+00:00 [queued]>
+[2024-08-07T15:29:31.340-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_ES_2020 scheduled__2024-08-06T00:00:00+00:00 [queued]>
+[2024-08-07T15:29:31.341-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:29:31.357-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIM_ES_2020> on 2024-08-06 00:00:00+00:00
+[2024-08-07T15:29:31.363-0300] {standard_task_runner.py:63} INFO - Started process 3363 to run task
+[2024-08-07T15:29:31.366-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'baixar_SIM_ES_2020', 'scheduled__2024-08-06T00:00:00+00:00', '--job-id', '1040', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmpfawz_x8z']
+[2024-08-07T15:29:31.367-0300] {standard_task_runner.py:91} INFO - Job 1040: Subtask baixar_SIM_ES_2020
+[2024-08-07T15:29:31.402-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.baixar_SIM_ES_2020 scheduled__2024-08-06T00:00:00+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:29:31.664-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='baixar_SIM_ES_2020' AIRFLOW_CTX_EXECUTION_DATE='2024-08-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-06T00:00:00+00:00'
+[2024-08-07T15:29:31.665-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:29:33.584-0300] {logging_mixin.py:188} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2024-08-07T15:29:33.584-0300] {logging_mixin.py:188} WARNING -   0%|          | 0.00/2.40M [00:00<?, ?B/s]
+[2024-08-07T15:29:33.585-0300] {logging_mixin.py:188} WARNING - 100%|##########| 2.40M/2.40M [00:00<00:00, 3.43GB/s]
+[2024-08-07T15:29:33.585-0300] {logging_mixin.py:188} INFO - Erro ao processar UF ES e ano 2020: 'ParquetSet' object is not iterable
+[2024-08-07T15:29:33.586-0300] {python.py:237} INFO - Done. Returned value was: {'ES': None}
+[2024-08-07T15:29:33.586-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:29:33.603-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=baixar_SIM_ES_2020, run_id=scheduled__2024-08-06T00:00:00+00:00, execution_date=20240806T000000, start_date=20240807T182931, end_date=20240807T182933
+[2024-08-07T15:29:33.629-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:29:33.649-0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:29:33.650-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

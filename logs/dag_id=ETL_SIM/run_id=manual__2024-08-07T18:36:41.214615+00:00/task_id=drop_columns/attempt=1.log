@@ -1,0 +1,67 @@
+[2024-08-07T15:40:16.606-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:40:16.620-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.drop_columns manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:40:16.626-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.drop_columns manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:40:16.626-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:40:16.643-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): drop_columns> on 2024-08-07 18:36:41.214615+00:00
+[2024-08-07T15:40:16.649-0300] {standard_task_runner.py:63} INFO - Started process 14033 to run task
+[2024-08-07T15:40:16.653-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'drop_columns', 'manual__2024-08-07T18:36:41.214615+00:00', '--job-id', '1055', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmp1r6c672j']
+[2024-08-07T15:40:16.655-0300] {standard_task_runner.py:91} INFO - Job 1055: Subtask drop_columns
+[2024-08-07T15:40:16.688-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.drop_columns manual__2024-08-07T18:36:41.214615+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:40:16.934-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='drop_columns' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T18:36:41.214615+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T18:36:41.214615+00:00'
+[2024-08-07T15:40:16.935-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:40:16.945-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/63858c386fab41368dad5a942add8efe-0.parquet
+[2024-08-07T15:40:17.527-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/63858c386fab41368dad5a942add8efe-0.parquet
+[2024-08-07T15:40:17.529-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/1c9f38c087234ad1bcf751aebad39757-0.parquet
+[2024-08-07T15:40:17.601-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/1c9f38c087234ad1bcf751aebad39757-0.parquet
+[2024-08-07T15:40:17.602-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/bc287a6e789a44b19ffb077a697e33a0-0.parquet
+[2024-08-07T15:40:17.929-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/bc287a6e789a44b19ffb077a697e33a0-0.parquet
+[2024-08-07T15:40:17.930-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/b6511d48faa04637a899a4662ac6ff7e-0.parquet
+[2024-08-07T15:40:18.201-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/b6511d48faa04637a899a4662ac6ff7e-0.parquet
+[2024-08-07T15:40:18.202-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/29f83e9c131b49dc8812f785e62eba17-0.parquet
+[2024-08-07T15:40:18.501-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/29f83e9c131b49dc8812f785e62eba17-0.parquet
+[2024-08-07T15:40:18.502-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/8caf5457d31e4412838599e8b8d511d8-0.parquet
+[2024-08-07T15:40:18.785-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOMG2020.parquet/8caf5457d31e4412838599e8b8d511d8-0.parquet
+[2024-08-07T15:40:18.786-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/f573c3974a764475b9a43cefac297644-0.parquet
+[2024-08-07T15:40:19.048-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/f573c3974a764475b9a43cefac297644-0.parquet
+[2024-08-07T15:40:19.048-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/bb42c2023f8a4a9a89e08f75728fe7e8-0.parquet
+[2024-08-07T15:40:19.367-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/bb42c2023f8a4a9a89e08f75728fe7e8-0.parquet
+[2024-08-07T15:40:19.367-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/195a3eb31757424cbf9a9bb6bd378c7e-0.parquet
+[2024-08-07T15:40:19.604-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/195a3eb31757424cbf9a9bb6bd378c7e-0.parquet
+[2024-08-07T15:40:19.604-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/023e705eb23f449695e90403fea31c22-0.parquet
+[2024-08-07T15:40:19.810-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/023e705eb23f449695e90403fea31c22-0.parquet
+[2024-08-07T15:40:19.811-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/353debf6e3b14334a8bcf0d3086e0b86-0.parquet
+[2024-08-07T15:40:20.057-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/353debf6e3b14334a8bcf0d3086e0b86-0.parquet
+[2024-08-07T15:40:20.057-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/e5a34d8b48ba43c8a5cf370dc4dc7789-0.parquet
+[2024-08-07T15:40:20.320-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DORJ2020.parquet/e5a34d8b48ba43c8a5cf370dc4dc7789-0.parquet
+[2024-08-07T15:40:20.320-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/eb51609f3a02450b93d5fc377aee3bcf-0.parquet
+[2024-08-07T15:40:20.579-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/eb51609f3a02450b93d5fc377aee3bcf-0.parquet
+[2024-08-07T15:40:20.579-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/9a0953e764a342e6b7426dac4d7f9f69-0.parquet
+[2024-08-07T15:40:20.859-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/9a0953e764a342e6b7426dac4d7f9f69-0.parquet
+[2024-08-07T15:40:20.860-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/fc1d60876e0440488f5c798577119a03-0.parquet
+[2024-08-07T15:40:21.115-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/fc1d60876e0440488f5c798577119a03-0.parquet
+[2024-08-07T15:40:21.117-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/15311e82b06f456eba6c7e9c8b0dcda7-0.parquet
+[2024-08-07T15:40:21.364-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/15311e82b06f456eba6c7e9c8b0dcda7-0.parquet
+[2024-08-07T15:40:21.365-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/db5423fb187a40029a81f7cb028bf349-0.parquet
+[2024-08-07T15:40:21.607-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/db5423fb187a40029a81f7cb028bf349-0.parquet
+[2024-08-07T15:40:21.608-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/d0b60ddf0c9041d1a894b323fb472de6-0.parquet
+[2024-08-07T15:40:21.934-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/d0b60ddf0c9041d1a894b323fb472de6-0.parquet
+[2024-08-07T15:40:21.934-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/ec077f9928244a9cb8e846a86ed8183d-0.parquet
+[2024-08-07T15:40:22.182-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/ec077f9928244a9cb8e846a86ed8183d-0.parquet
+[2024-08-07T15:40:22.182-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/f5ccb0cf322146adba88e87832179bf7-0.parquet
+[2024-08-07T15:40:22.439-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/f5ccb0cf322146adba88e87832179bf7-0.parquet
+[2024-08-07T15:40:22.439-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/ff4325fb7c264a45b61bdfa28cd8763e-0.parquet
+[2024-08-07T15:40:22.698-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/ff4325fb7c264a45b61bdfa28cd8763e-0.parquet
+[2024-08-07T15:40:22.698-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/9d416a09a8754dd7bedce2da72398868-0.parquet
+[2024-08-07T15:40:23.204-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/9d416a09a8754dd7bedce2da72398868-0.parquet
+[2024-08-07T15:40:23.204-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/7613eb38b23d42a4b24f8fe36739f721-0.parquet
+[2024-08-07T15:40:23.509-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/7613eb38b23d42a4b24f8fe36739f721-0.parquet
+[2024-08-07T15:40:23.509-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/ff054f2a11ed477584769a1b6b3d6d38-0.parquet
+[2024-08-07T15:40:23.688-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOSP2020.parquet/ff054f2a11ed477584769a1b6b3d6d38-0.parquet
+[2024-08-07T15:40:23.688-0300] {logging_mixin.py:188} INFO - Removendo colunas de /home/jamilsonfs/airflow/dados/dados_parquet/DOES2020.parquet/3ccf25840b1a440fa56647d4a40294a2-0.parquet
+[2024-08-07T15:40:24.098-0300] {logging_mixin.py:188} INFO - Colunas removidas e dados salvos em Parquet: /home/jamilsonfs/airflow/dados/dados_parquet/DOES2020.parquet/3ccf25840b1a440fa56647d4a40294a2-0.parquet
+[2024-08-07T15:40:24.102-0300] {python.py:237} INFO - Done. Returned value was: None
+[2024-08-07T15:40:24.102-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:40:24.106-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=drop_columns, run_id=manual__2024-08-07T18:36:41.214615+00:00, execution_date=20240807T183641, start_date=20240807T184016, end_date=20240807T184024
+[2024-08-07T15:40:24.148-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:40:24.165-0300] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:40:24.170-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

@@ -1,0 +1,82 @@
+[2024-08-07T15:38:57.669-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:38:57.684-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_MG_2020 manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:38:57.693-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_MG_2020 manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:38:57.693-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:38:57.713-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIM_MG_2020> on 2024-08-07 18:36:41.214615+00:00
+[2024-08-07T15:38:57.718-0300] {standard_task_runner.py:63} INFO - Started process 12410 to run task
+[2024-08-07T15:38:57.721-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'baixar_SIM_MG_2020', 'manual__2024-08-07T18:36:41.214615+00:00', '--job-id', '1051', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmp1_zngrcm']
+[2024-08-07T15:38:57.723-0300] {standard_task_runner.py:91} INFO - Job 1051: Subtask baixar_SIM_MG_2020
+[2024-08-07T15:38:57.761-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.baixar_SIM_MG_2020 manual__2024-08-07T18:36:41.214615+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:38:58.005-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='baixar_SIM_MG_2020' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T18:36:41.214615+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T18:36:41.214615+00:00'
+[2024-08-07T15:38:58.006-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:39:00.014-0300] {logging_mixin.py:188} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2024-08-07T15:39:00.015-0300] {logging_mixin.py:188} WARNING -   0%|          | 0.00/12.7M [00:00<?, ?B/s]
+[2024-08-07T15:39:00.016-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   0%|          | 0.00/12.7M [00:00<?, ?B/s]
+[2024-08-07T15:39:00.549-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   0%|          | 5.79k/12.7M [00:00<19:25, 10.9kB/s]
+[2024-08-07T15:39:00.678-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   0%|          | 25.6k/12.7M [00:00<04:27, 47.4kB/s]
+[2024-08-07T15:39:00.806-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   0%|          | 60.8k/12.7M [00:00<01:56, 108kB/s] 
+[2024-08-07T15:39:00.937-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   1%|1         | 170k/12.7M [00:00<00:40, 313kB/s] 
+[2024-08-07T15:39:01.090-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   3%|3         | 401k/12.7M [00:01<00:17, 697kB/s]
+[2024-08-07T15:39:01.234-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   5%|5         | 660k/12.7M [00:01<00:11, 1.02MB/s]
+[2024-08-07T15:39:01.381-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   7%|7         | 926k/12.7M [00:01<00:09, 1.26MB/s]
+[2024-08-07T15:39:01.530-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   9%|9         | 1.19M/12.7M [00:01<00:08, 1.41MB/s]
+[2024-08-07T15:39:01.675-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  11%|#1        | 1.45M/12.7M [00:01<00:07, 1.53MB/s]
+[2024-08-07T15:39:01.813-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  13%|#3        | 1.71M/12.7M [00:01<00:06, 1.64MB/s]
+[2024-08-07T15:39:01.952-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  16%|#5        | 1.97M/12.7M [00:01<00:06, 1.71MB/s]
+[2024-08-07T15:39:02.093-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  18%|#7        | 2.24M/12.7M [00:02<00:05, 1.75MB/s]
+[2024-08-07T15:39:02.234-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  20%|#9        | 2.50M/12.7M [00:02<00:05, 1.79MB/s]
+[2024-08-07T15:39:02.390-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  22%|##1       | 2.76M/12.7M [00:02<00:05, 1.75MB/s]
+[2024-08-07T15:39:02.534-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  24%|##3       | 3.02M/12.7M [00:02<00:05, 1.77MB/s]
+[2024-08-07T15:39:02.686-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  26%|##5       | 3.28M/12.7M [00:02<00:05, 1.76MB/s]
+[2024-08-07T15:39:02.821-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  28%|##7       | 3.55M/12.7M [00:02<00:05, 1.81MB/s]
+[2024-08-07T15:39:02.966-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  30%|###       | 3.81M/12.7M [00:02<00:04, 1.81MB/s]
+[2024-08-07T15:39:03.107-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  32%|###2      | 4.07M/12.7M [00:03<00:04, 1.83MB/s]
+[2024-08-07T15:39:03.246-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  34%|###4      | 4.33M/12.7M [00:03<00:04, 1.84MB/s]
+[2024-08-07T15:39:03.392-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  36%|###6      | 4.60M/12.7M [00:03<00:04, 1.83MB/s]
+[2024-08-07T15:39:03.537-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  38%|###8      | 4.86M/12.7M [00:03<00:04, 1.82MB/s]
+[2024-08-07T15:39:03.683-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  40%|####      | 5.12M/12.7M [00:03<00:04, 1.81MB/s]
+[2024-08-07T15:39:03.823-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  42%|####2     | 5.38M/12.7M [00:03<00:03, 1.83MB/s]
+[2024-08-07T15:39:03.966-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  44%|####4     | 5.64M/12.7M [00:03<00:03, 1.83MB/s]
+[2024-08-07T15:39:04.109-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  47%|####6     | 5.91M/12.7M [00:04<00:03, 1.83MB/s]
+[2024-08-07T15:39:04.258-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  49%|####8     | 6.17M/12.7M [00:04<00:03, 1.81MB/s]
+[2024-08-07T15:39:04.397-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  51%|#####     | 6.43M/12.7M [00:04<00:03, 1.83MB/s]
+[2024-08-07T15:39:04.547-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  53%|#####2    | 6.69M/12.7M [00:04<00:03, 1.81MB/s]
+[2024-08-07T15:39:04.695-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  55%|#####4    | 6.96M/12.7M [00:04<00:03, 1.79MB/s]
+[2024-08-07T15:39:04.834-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  57%|#####6    | 7.22M/12.7M [00:04<00:03, 1.82MB/s]
+[2024-08-07T15:39:04.974-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  59%|#####8    | 7.48M/12.7M [00:04<00:02, 1.84MB/s]
+[2024-08-07T15:39:05.124-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  61%|######    | 7.74M/12.7M [00:05<00:02, 1.81MB/s]
+[2024-08-07T15:39:05.269-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  63%|######3   | 8.00M/12.7M [00:05<00:02, 1.81MB/s]
+[2024-08-07T15:39:05.416-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  65%|######5   | 8.27M/12.7M [00:05<00:02, 1.80MB/s]
+[2024-08-07T15:39:05.555-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  67%|######7   | 8.53M/12.7M [00:05<00:02, 1.83MB/s]
+[2024-08-07T15:39:05.694-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  69%|######9   | 8.79M/12.7M [00:05<00:02, 1.84MB/s]
+[2024-08-07T15:39:05.833-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  71%|#######1  | 9.05M/12.7M [00:05<00:01, 1.86MB/s]
+[2024-08-07T15:39:05.976-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  73%|#######3  | 9.31M/12.7M [00:05<00:01, 1.85MB/s]
+[2024-08-07T15:39:06.117-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  75%|#######5  | 9.58M/12.7M [00:06<00:01, 1.85MB/s]
+[2024-08-07T15:39:06.261-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  77%|#######7  | 9.84M/12.7M [00:06<00:01, 1.84MB/s]
+[2024-08-07T15:39:06.410-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  80%|#######9  | 10.1M/12.7M [00:06<00:01, 1.82MB/s]
+[2024-08-07T15:39:06.551-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  82%|########1 | 10.4M/12.7M [00:06<00:01, 1.83MB/s]
+[2024-08-07T15:39:06.695-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  84%|########3 | 10.6M/12.7M [00:06<00:01, 1.83MB/s]
+[2024-08-07T15:39:06.845-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  86%|########5 | 10.9M/12.7M [00:06<00:01, 1.80MB/s]
+[2024-08-07T15:39:06.982-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  88%|########7 | 11.1M/12.7M [00:06<00:00, 1.83MB/s]
+[2024-08-07T15:39:07.134-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  90%|########9 | 11.4M/12.7M [00:07<00:00, 1.80MB/s]
+[2024-08-07T15:39:07.273-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  92%|#########1| 11.7M/12.7M [00:07<00:00, 1.82MB/s]
+[2024-08-07T15:39:07.413-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  94%|#########4| 11.9M/12.7M [00:07<00:00, 1.84MB/s]
+[2024-08-07T15:39:07.571-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  96%|#########6| 12.2M/12.7M [00:07<00:00, 1.78MB/s]
+[2024-08-07T15:39:07.727-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:  98%|#########8| 12.5M/12.7M [00:07<00:00, 1.75MB/s]
+[2024-08-07T15:39:07.863-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc: 100%|##########| 12.7M/12.7M [00:07<00:00, 1.75MB/s]
+[2024-08-07T15:39:07.864-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbc:   0%|          | 0.00/1.00 [00:00<?, ?B/s]          
+[2024-08-07T15:39:07.864-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbf:   0%|          | 0.00/1.00 [00:00<?, ?B/s]
+[2024-08-07T15:39:08.367-0300] {logging_mixin.py:188} WARNING - DOMG2020.dbf:   0%|          | 0.00/373k [00:00<?, ?B/s]
+[2024-08-07T15:39:08.368-0300] {logging_mixin.py:188} WARNING - DOMG2020.parquet:   0%|          | 0.00/373k [00:00<?, ?B/s]
+[2024-08-07T15:39:20.029-0300] {logging_mixin.py:188} WARNING - DOMG2020.parquet:  32%|###2      | 120k/373k [00:11<00:24, 10.3kB/s]
+[2024-08-07T15:39:22.509-0300] {logging_mixin.py:188} WARNING - DOMG2020.parquet:  40%|####      | 150k/373k [00:14<00:20, 10.6kB/s]
+[2024-08-07T15:39:24.819-0300] {logging_mixin.py:188} WARNING - DOMG2020.parquet:  48%|####8     | 180k/373k [00:16<00:17, 11.1kB/s]
+[2024-08-07T15:39:25.045-0300] {logging_mixin.py:188} WARNING - DOMG2020.parquet: 100%|##########| 373k/373k [00:16<00:00, 32.7kB/s]
+[2024-08-07T15:39:25.061-0300] {logging_mixin.py:188} WARNING - DOMG2020.parquet: 100%|##########| 373k/373k [00:16<00:00, 22.3kB/s]
+[2024-08-07T15:39:25.061-0300] {logging_mixin.py:188} INFO - Erro ao processar UF MG e ano 2020: 'ParquetSet' object is not iterable
+[2024-08-07T15:39:25.061-0300] {python.py:237} INFO - Done. Returned value was: {'MG': None}
+[2024-08-07T15:39:25.061-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:39:25.078-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=baixar_SIM_MG_2020, run_id=manual__2024-08-07T18:36:41.214615+00:00, execution_date=20240807T183641, start_date=20240807T183857, end_date=20240807T183925
+[2024-08-07T15:39:25.146-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:39:25.161-0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:39:25.162-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

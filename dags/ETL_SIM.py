@@ -11,6 +11,37 @@ from enum import Enum
 import pandas as pd
 import json
 
+from airflow.models import BaseOperator
+from airflow.utils.decorators import apply_defaults
+from atlasclient.client import Atlas
+import requests
+
+
+class AtlasConnectionCheckOperator(BaseOperator):
+    @apply_defaults
+    def __init__(self, atlas_url, atlas_user, atlas_password, *args, **kwargs):
+        super(AtlasConnectionCheckOperator, self).__init__(*args, **kwargs)
+        self.atlas_url = atlas_url
+        self.atlas_user = atlas_user
+        self.atlas_password = atlas_password
+
+    def check_connection(self):
+        try:
+            response = requests.get(self.atlas_url, auth=(self.atlas_user, self.atlas_password))
+            if response.status_code == 200:
+                self.log.info("Conexão bem-sucedida com o Apache Atlas.")
+                return True
+            else:
+                self.log.error(f"Falha na conexão com o Apache Atlas. Status Code: {response.status_code}")
+                return False
+        except Exception as e:
+            self.log.error(f"Erro ao conectar-se ao Apache Atlas: {e}")
+            return False
+
+    def execute(self, context):
+        if not self.check_connection():
+            raise Exception("Falha na conexão com o Apache Atlas.")
+
 class UnidadeTempo(Enum):
     MINUTOS = 0
     HORAS = 1
@@ -60,7 +91,7 @@ regions = {
     #'NORDESTE': ['MA', 'PI', 'CE', 'RN', 'PB', 'PE', 'AL', 'SE', 'BA'],  # Região Nordeste
     #'NORTE': ['AC', 'AP', 'AM', 'PA', 'RO', 'RR', 'TO']  # Região Norte
 }
-ano = [2023]
+ano = [2020]
 
 def create_spark_session():
     builder = pyspark.sql.SparkSession.builder.appName("MyApp") \
@@ -210,6 +241,43 @@ def drop_columns(parquet_dir, json_file):
                 except Exception as e:
                     print(f"Erro ao processar o arquivo {parquet_file_path}: {e}")
 
+
+def verificacao_inicial(parquet_dir):
+    resultados_iniciais = []
+
+    for arquivo in os.listdir(parquet_dir):
+        if arquivo.endswith(".parquet"):
+            caminho_arquivo = os.path.join(parquet_dir, arquivo)
+            df = pd.read_parquet(caminho_arquivo)
+            
+            #quais metadados sao importantes?
+            resultados_iniciais.append({
+                'Arquivo': arquivo,
+                'Número de Registros': len(df),
+                'Colunas': ', '.join(df.columns)
+            })
+    
+    df_resultados_iniciais = pd.DataFrame(resultados_iniciais)
+    df_resultados_iniciais.to_csv(os.path.join(parquet_dir, 'verificacao_inicial.csv'), index=False)
+
+def verificacao_final(parquet_dir):
+    resultados_finais = []
+
+    for arquivo in os.listdir(parquet_dir):
+        if arquivo.endswith(".parquet"):
+            caminho_arquivo = os.path.join(parquet_dir, arquivo)
+            df = pd.read_parquet(caminho_arquivo)
+            
+            resultados_finais.append({
+                'Arquivo': arquivo,
+                'Número de Registros': len(df),
+                'Colunas': ', '.join(df.columns)
+            })
+    
+    df_resultados_finais = pd.DataFrame(resultados_finais)
+    df_resultados_finais.to_csv(os.path.join(parquet_dir, 'verificacao_final.csv'), index=False)
+
+
 def inserir_minio():
     return
 
@@ -270,11 +338,33 @@ with DAG(
         op_kwargs={'parquet_dir': '/home/jamilsonfs/airflow/dados/dados_parquet', 'json_file':'/home/jamilsonfs/airflow/dados/json_files/cid10_data.json'},
     ) 
 
+    #Reunião
+    atlas_task = AtlasConnectionCheckOperator(
+        task_id='atlas_connection',
+        atlas_url='http://10.100.100.61:21000/',
+        atlas_user='admin',
+        atlas_password='admin',
+        dag=dag
+    )
+
+    verificacao_inicial = PythonOperator(
+        task_id='v_inicial',
+        python_callable=verificacao_inicial,
+        op_kwargs={'parquet_dir': '/home/jamilsonfs/airflow/dados/dados_parquet'},
+    ) 
+
+    verificacao_final = PythonOperator(
+        task_id='v_final',
+        python_callable=verificacao_final,
+        op_kwargs={'parquet_dir': '/home/jamilsonfs/airflow/dados/dados_parquet'},
+    ) 
+
+
     for region, ufs in regions.items():
         for year in ano:
             baixar_region_task = PythonOperator(
                 task_id=f'baixar_{region}_{year}',
-                python_callable=lambda: None,  # Implement the logic for region download if needed
+                python_callable=lambda: None,  
                 op_kwargs={'region': region},
                 provide_context=True,
             )
@@ -294,15 +384,19 @@ with DAG(
                 baixar_region_task >> baixar_uf_task
                 baixar_uf_tasks.append(baixar_uf_task)
 
-            baixar_uf_tasks >> drop_columns_task >> group_transform_task
+            baixar_uf_tasks >>  atlas_task >> verificacao_inicial >> drop_columns_task >> group_transform_task
 
     group_transform_task >> transforme2_task
     transforme2_task >> transforme3_task
-    transforme3_task >> gerar_delta>> end
+    transforme3_task >> verificacao_final >> gerar_delta>> end
 
 start.ui_color = '#3366ff'
 configuracoes.ui_color = '#3366ff'
 
+
+
+verificacao_final.ui_color = '#808080'
+verificacao_inicial.ui_color = '#808080'
 drop_columns_task.ui_color = '#ffd966'
 group_transform_task.ui_color = '#ffd966'
 transforme2_task.ui_color = '#ffd966'

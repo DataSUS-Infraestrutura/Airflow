@@ -1,0 +1,20 @@
+[2024-08-05T18:40:36.152-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-05T18:40:36.166-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_MG_2023 scheduled__2024-08-04T00:00:00+00:00 [queued]>
+[2024-08-05T18:40:36.172-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_MG_2023 scheduled__2024-08-04T00:00:00+00:00 [queued]>
+[2024-08-05T18:40:36.172-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-05T18:40:36.187-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIM_MG_2023> on 2024-08-04 00:00:00+00:00
+[2024-08-05T18:40:36.191-0300] {standard_task_runner.py:63} INFO - Started process 42253 to run task
+[2024-08-05T18:40:36.194-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'baixar_SIM_MG_2023', 'scheduled__2024-08-04T00:00:00+00:00', '--job-id', '981', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmpcrcrbfj7']
+[2024-08-05T18:40:36.196-0300] {standard_task_runner.py:91} INFO - Job 981: Subtask baixar_SIM_MG_2023
+[2024-08-05T18:40:36.235-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.baixar_SIM_MG_2023 scheduled__2024-08-04T00:00:00+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-05T18:40:36.458-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='baixar_SIM_MG_2023' AIRFLOW_CTX_EXECUTION_DATE='2024-08-04T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-04T00:00:00+00:00'
+[2024-08-05T18:40:36.459-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-05T18:40:38.587-0300] {logging_mixin.py:188} WARNING - 0it [00:00, ?it/s]
+[2024-08-05T18:40:38.588-0300] {logging_mixin.py:188} WARNING - 0it [00:00, ?it/s]
+[2024-08-05T18:40:38.589-0300] {logging_mixin.py:188} INFO - Dados para a UF MG e ano 2023: {'MG': []}
+[2024-08-05T18:40:38.589-0300] {python.py:237} INFO - Done. Returned value was: {'MG': []}
+[2024-08-05T18:40:38.590-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-05T18:40:38.609-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=baixar_SIM_MG_2023, run_id=scheduled__2024-08-04T00:00:00+00:00, execution_date=20240804T000000, start_date=20240805T214036, end_date=20240805T214038
+[2024-08-05T18:40:38.660-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-05T18:40:38.689-0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-05T18:40:38.690-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

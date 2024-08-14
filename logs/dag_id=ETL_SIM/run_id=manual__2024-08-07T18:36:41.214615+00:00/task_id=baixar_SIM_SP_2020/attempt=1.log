@@ -1,0 +1,149 @@
+[2024-08-07T15:37:18.892-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:37:18.910-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_SP_2020 manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:37:18.918-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_SP_2020 manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:37:18.919-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:37:18.940-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIM_SP_2020> on 2024-08-07 18:36:41.214615+00:00
+[2024-08-07T15:37:18.946-0300] {standard_task_runner.py:63} INFO - Started process 11008 to run task
+[2024-08-07T15:37:18.954-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'baixar_SIM_SP_2020', 'manual__2024-08-07T18:36:41.214615+00:00', '--job-id', '1049', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmp9vafgwcr']
+[2024-08-07T15:37:18.956-0300] {standard_task_runner.py:91} INFO - Job 1049: Subtask baixar_SIM_SP_2020
+[2024-08-07T15:37:19.012-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.baixar_SIM_SP_2020 manual__2024-08-07T18:36:41.214615+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:37:19.276-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='baixar_SIM_SP_2020' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T18:36:41.214615+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T18:36:41.214615+00:00'
+[2024-08-07T15:37:19.277-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:37:21.330-0300] {logging_mixin.py:188} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2024-08-07T15:37:21.332-0300] {logging_mixin.py:188} WARNING -   0%|          | 0.00/28.7M [00:00<?, ?B/s]
+[2024-08-07T15:37:21.334-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   0%|          | 0.00/28.7M [00:00<?, ?B/s]
+[2024-08-07T15:37:21.870-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   0%|          | 5.79k/28.7M [00:00<44:24, 10.8kB/s]
+[2024-08-07T15:37:21.992-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   0%|          | 25.6k/28.7M [00:00<10:01, 47.7kB/s]
+[2024-08-07T15:37:22.132-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   0%|          | 66.1k/28.7M [00:00<04:04, 117kB/s] 
+[2024-08-07T15:37:22.252-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   0%|          | 138k/28.7M [00:00<01:58, 241kB/s] 
+[2024-08-07T15:37:22.377-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   1%|          | 270k/28.7M [00:01<01:00, 470kB/s]
+[2024-08-07T15:37:22.504-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   2%|1         | 526k/28.7M [00:01<00:30, 914kB/s]
+[2024-08-07T15:37:22.636-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   3%|2         | 795k/28.7M [00:01<00:22, 1.25MB/s]
+[2024-08-07T15:37:22.766-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   4%|3         | 1.06M/28.7M [00:01<00:18, 1.48MB/s]
+[2024-08-07T15:37:22.901-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   5%|4         | 1.32M/28.7M [00:01<00:16, 1.62MB/s]
+[2024-08-07T15:37:23.039-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   6%|5         | 1.58M/28.7M [00:01<00:15, 1.70MB/s]
+[2024-08-07T15:37:23.170-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   6%|6         | 1.84M/28.7M [00:01<00:15, 1.79MB/s]
+[2024-08-07T15:37:23.302-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   7%|7         | 2.11M/28.7M [00:01<00:14, 1.85MB/s]
+[2024-08-07T15:37:23.436-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   8%|8         | 2.37M/28.7M [00:02<00:14, 1.88MB/s]
+[2024-08-07T15:37:23.578-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   9%|9         | 2.63M/28.7M [00:02<00:13, 1.87MB/s]
+[2024-08-07T15:37:23.713-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  10%|#         | 2.89M/28.7M [00:02<00:13, 1.89MB/s]
+[2024-08-07T15:37:23.847-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  11%|#         | 3.15M/28.7M [00:02<00:13, 1.91MB/s]
+[2024-08-07T15:37:23.978-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  12%|#1        | 3.42M/28.7M [00:02<00:13, 1.93MB/s]
+[2024-08-07T15:37:24.110-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  13%|#2        | 3.68M/28.7M [00:02<00:12, 1.95MB/s]
+[2024-08-07T15:37:24.245-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  14%|#3        | 3.94M/28.7M [00:02<00:12, 1.95MB/s]
+[2024-08-07T15:37:24.375-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  15%|#4        | 4.20M/28.7M [00:03<00:12, 1.97MB/s]
+[2024-08-07T15:37:24.515-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  16%|#5        | 4.46M/28.7M [00:03<00:12, 1.94MB/s]
+[2024-08-07T15:37:24.646-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  16%|#6        | 4.73M/28.7M [00:03<00:12, 1.95MB/s]
+[2024-08-07T15:37:24.777-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  17%|#7        | 4.99M/28.7M [00:03<00:12, 1.97MB/s]
+[2024-08-07T15:37:24.915-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  18%|#8        | 5.25M/28.7M [00:03<00:12, 1.95MB/s]
+[2024-08-07T15:37:25.049-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  19%|#9        | 5.51M/28.7M [00:03<00:11, 1.95MB/s]
+[2024-08-07T15:37:25.182-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  20%|##        | 5.78M/28.7M [00:03<00:11, 1.96MB/s]
+[2024-08-07T15:37:25.314-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  21%|##1       | 6.04M/28.7M [00:03<00:11, 1.96MB/s]
+[2024-08-07T15:37:25.453-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  22%|##1       | 6.30M/28.7M [00:04<00:11, 1.94MB/s]
+[2024-08-07T15:37:25.588-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  23%|##2       | 6.56M/28.7M [00:04<00:11, 1.94MB/s]
+[2024-08-07T15:37:25.715-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  24%|##3       | 6.82M/28.7M [00:04<00:11, 1.97MB/s]
+[2024-08-07T15:37:25.851-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  25%|##4       | 7.09M/28.7M [00:04<00:11, 1.96MB/s]
+[2024-08-07T15:37:25.976-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  26%|##5       | 7.35M/28.7M [00:04<00:10, 2.00MB/s]
+[2024-08-07T15:37:26.110-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  27%|##6       | 7.61M/28.7M [00:04<00:10, 1.99MB/s]
+[2024-08-07T15:37:26.249-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  27%|##7       | 7.87M/28.7M [00:04<00:10, 1.96MB/s]
+[2024-08-07T15:37:26.383-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  28%|##8       | 8.13M/28.7M [00:05<00:10, 1.96MB/s]
+[2024-08-07T15:37:26.528-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  29%|##9       | 8.40M/28.7M [00:05<00:10, 1.91MB/s]
+[2024-08-07T15:37:26.673-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  30%|###       | 8.66M/28.7M [00:05<00:10, 1.88MB/s]
+[2024-08-07T15:37:26.816-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  31%|###1      | 8.92M/28.7M [00:05<00:10, 1.86MB/s]
+[2024-08-07T15:37:26.943-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  32%|###1      | 9.18M/28.7M [00:05<00:10, 1.92MB/s]
+[2024-08-07T15:37:27.071-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  33%|###2      | 9.45M/28.7M [00:05<00:09, 1.96MB/s]
+[2024-08-07T15:37:27.211-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  34%|###3      | 9.71M/28.7M [00:05<00:09, 1.93MB/s]
+[2024-08-07T15:37:27.371-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  35%|###4      | 9.97M/28.7M [00:06<00:10, 1.83MB/s]
+[2024-08-07T15:37:27.508-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  36%|###5      | 10.2M/28.7M [00:06<00:09, 1.86MB/s]
+[2024-08-07T15:37:27.646-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  37%|###6      | 10.5M/28.7M [00:06<00:09, 1.87MB/s]
+[2024-08-07T15:37:27.781-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  37%|###7      | 10.8M/28.7M [00:06<00:09, 1.89MB/s]
+[2024-08-07T15:37:27.909-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  38%|###8      | 11.0M/28.7M [00:06<00:09, 1.94MB/s]
+[2024-08-07T15:37:28.048-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  39%|###9      | 11.3M/28.7M [00:06<00:09, 1.92MB/s]
+[2024-08-07T15:37:28.179-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  40%|####      | 11.5M/28.7M [00:06<00:08, 1.94MB/s]
+[2024-08-07T15:37:28.312-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  41%|####1     | 11.8M/28.7M [00:06<00:08, 1.95MB/s]
+[2024-08-07T15:37:28.443-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  42%|####2     | 12.1M/28.7M [00:07<00:08, 1.96MB/s]
+[2024-08-07T15:37:28.577-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  43%|####2     | 12.3M/28.7M [00:07<00:08, 1.96MB/s]
+[2024-08-07T15:37:28.712-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  44%|####3     | 12.6M/28.7M [00:07<00:08, 1.96MB/s]
+[2024-08-07T15:37:28.846-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  45%|####4     | 12.9M/28.7M [00:07<00:08, 1.96MB/s]
+[2024-08-07T15:37:28.976-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  46%|####5     | 13.1M/28.7M [00:07<00:07, 1.97MB/s]
+[2024-08-07T15:37:29.104-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  47%|####6     | 13.4M/28.7M [00:07<00:07, 2.00MB/s]
+[2024-08-07T15:37:29.237-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  48%|####7     | 13.6M/28.7M [00:07<00:07, 1.99MB/s]
+[2024-08-07T15:37:29.394-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  48%|####8     | 13.9M/28.7M [00:08<00:07, 1.88MB/s]
+[2024-08-07T15:37:29.528-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  49%|####9     | 14.2M/28.7M [00:08<00:07, 1.90MB/s]
+[2024-08-07T15:37:29.661-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  50%|#####     | 14.4M/28.7M [00:08<00:07, 1.92MB/s]
+[2024-08-07T15:37:29.791-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  51%|#####1    | 14.7M/28.7M [00:08<00:07, 1.95MB/s]
+[2024-08-07T15:37:29.922-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  52%|#####2    | 15.0M/28.7M [00:08<00:07, 1.97MB/s]
+[2024-08-07T15:37:30.062-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  53%|#####2    | 15.2M/28.7M [00:08<00:06, 1.94MB/s]
+[2024-08-07T15:37:30.198-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  54%|#####3    | 15.5M/28.7M [00:08<00:06, 1.93MB/s]
+[2024-08-07T15:37:30.329-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  55%|#####4    | 15.7M/28.7M [00:08<00:06, 1.95MB/s]
+[2024-08-07T15:37:30.464-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  56%|#####5    | 16.0M/28.7M [00:09<00:06, 1.95MB/s]
+[2024-08-07T15:37:30.601-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  57%|#####6    | 16.3M/28.7M [00:09<00:06, 1.94MB/s]
+[2024-08-07T15:37:30.734-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  58%|#####7    | 16.5M/28.7M [00:09<00:06, 1.95MB/s]
+[2024-08-07T15:37:30.875-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  58%|#####8    | 16.8M/28.7M [00:09<00:06, 1.92MB/s]
+[2024-08-07T15:37:31.017-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  59%|#####9    | 17.0M/28.7M [00:09<00:06, 1.90MB/s]
+[2024-08-07T15:37:31.157-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  60%|######    | 17.3M/28.7M [00:09<00:06, 1.89MB/s]
+[2024-08-07T15:37:31.301-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  61%|######1   | 17.6M/28.7M [00:09<00:05, 1.87MB/s]
+[2024-08-07T15:37:31.442-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  62%|######2   | 17.8M/28.7M [00:10<00:05, 1.86MB/s]
+[2024-08-07T15:37:31.578-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  63%|######3   | 18.1M/28.7M [00:10<00:05, 1.88MB/s]
+[2024-08-07T15:37:31.709-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  64%|######3   | 18.4M/28.7M [00:10<00:05, 1.92MB/s]
+[2024-08-07T15:37:31.843-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  65%|######4   | 18.6M/28.7M [00:10<00:05, 1.93MB/s]
+[2024-08-07T15:37:31.977-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  66%|######5   | 18.9M/28.7M [00:10<00:05, 1.94MB/s]
+[2024-08-07T15:37:32.121-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  67%|######6   | 19.1M/28.7M [00:10<00:05, 1.90MB/s]
+[2024-08-07T15:37:32.251-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  68%|######7   | 19.4M/28.7M [00:10<00:04, 1.93MB/s]
+[2024-08-07T15:37:32.382-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  69%|######8   | 19.7M/28.7M [00:11<00:04, 1.95MB/s]
+[2024-08-07T15:37:32.508-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  69%|######9   | 19.9M/28.7M [00:11<00:04, 1.99MB/s]
+[2024-08-07T15:37:32.648-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  70%|#######   | 20.2M/28.7M [00:11<00:04, 1.95MB/s]
+[2024-08-07T15:37:32.777-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  71%|#######1  | 20.5M/28.7M [00:11<00:04, 1.98MB/s]
+[2024-08-07T15:37:32.909-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  72%|#######2  | 20.7M/28.7M [00:11<00:04, 1.98MB/s]
+[2024-08-07T15:37:33.039-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  73%|#######3  | 21.0M/28.7M [00:11<00:03, 1.99MB/s]
+[2024-08-07T15:37:33.170-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  74%|#######3  | 21.2M/28.7M [00:11<00:03, 2.00MB/s]
+[2024-08-07T15:37:33.313-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  75%|#######4  | 21.5M/28.7M [00:11<00:03, 1.94MB/s]
+[2024-08-07T15:37:33.459-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  76%|#######5  | 21.8M/28.7M [00:12<00:03, 1.90MB/s]
+[2024-08-07T15:37:33.600-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  77%|#######6  | 22.0M/28.7M [00:12<00:03, 1.88MB/s]
+[2024-08-07T15:37:33.734-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  78%|#######7  | 22.3M/28.7M [00:12<00:03, 1.91MB/s]
+[2024-08-07T15:37:33.867-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  79%|#######8  | 22.6M/28.7M [00:12<00:03, 1.93MB/s]
+[2024-08-07T15:37:33.995-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  79%|#######9  | 22.8M/28.7M [00:12<00:03, 1.96MB/s]
+[2024-08-07T15:37:34.121-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  80%|########  | 23.1M/28.7M [00:12<00:02, 1.99MB/s]
+[2024-08-07T15:37:34.254-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  81%|########1 | 23.3M/28.7M [00:12<00:02, 1.99MB/s]
+[2024-08-07T15:37:34.387-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  82%|########2 | 23.6M/28.7M [00:13<00:02, 1.98MB/s]
+[2024-08-07T15:37:34.527-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  83%|########3 | 23.9M/28.7M [00:13<00:02, 1.95MB/s]
+[2024-08-07T15:37:34.660-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  84%|########4 | 24.1M/28.7M [00:13<00:02, 1.95MB/s]
+[2024-08-07T15:37:34.791-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  85%|########4 | 24.4M/28.7M [00:13<00:02, 1.97MB/s]
+[2024-08-07T15:37:34.926-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  86%|########5 | 24.6M/28.7M [00:13<00:02, 1.97MB/s]
+[2024-08-07T15:37:35.061-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  87%|########6 | 24.9M/28.7M [00:13<00:01, 1.95MB/s]
+[2024-08-07T15:37:35.195-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  88%|########7 | 25.2M/28.7M [00:13<00:01, 1.96MB/s]
+[2024-08-07T15:37:35.326-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  89%|########8 | 25.4M/28.7M [00:13<00:01, 1.97MB/s]
+[2024-08-07T15:37:35.465-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  90%|########9 | 25.7M/28.7M [00:14<00:01, 1.94MB/s]
+[2024-08-07T15:37:35.598-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  90%|######### | 26.0M/28.7M [00:14<00:01, 1.95MB/s]
+[2024-08-07T15:37:35.726-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  91%|#########1| 26.2M/28.7M [00:14<00:01, 1.98MB/s]
+[2024-08-07T15:37:35.860-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  92%|#########2| 26.5M/28.7M [00:14<00:01, 1.97MB/s]
+[2024-08-07T15:37:35.993-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  93%|#########3| 26.7M/28.7M [00:14<00:00, 1.97MB/s]
+[2024-08-07T15:37:36.126-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  94%|#########4| 27.0M/28.7M [00:14<00:00, 1.98MB/s]
+[2024-08-07T15:37:36.262-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  95%|#########4| 27.3M/28.7M [00:14<00:00, 1.96MB/s]
+[2024-08-07T15:37:36.390-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  96%|#########5| 27.5M/28.7M [00:15<00:00, 1.98MB/s]
+[2024-08-07T15:37:36.524-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  97%|#########6| 27.8M/28.7M [00:15<00:00, 1.98MB/s]
+[2024-08-07T15:37:36.659-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  98%|#########7| 28.1M/28.7M [00:15<00:00, 1.98MB/s]
+[2024-08-07T15:37:36.786-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:  99%|#########8| 28.3M/28.7M [00:15<00:00, 1.99MB/s]
+[2024-08-07T15:37:36.923-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc: 100%|#########9| 28.6M/28.7M [00:15<00:00, 1.97MB/s]
+[2024-08-07T15:37:37.046-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbc:   0%|          | 0.00/1.00 [00:00<?, ?B/s]          
+[2024-08-07T15:37:37.047-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbf:   0%|          | 0.00/1.00 [00:00<?, ?B/s]
+[2024-08-07T15:37:38.154-0300] {logging_mixin.py:188} WARNING - DOSP2020.dbf:   0%|          | 0.00/857k [00:00<?, ?B/s]
+[2024-08-07T15:37:38.154-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:   0%|          | 0.00/857k [00:00<?, ?B/s]
+[2024-08-07T15:37:51.422-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  14%|#4        | 120k/857k [00:13<01:21, 9.04kB/s]
+[2024-08-07T15:37:51.985-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  18%|#7        | 150k/857k [00:13<01:05, 10.8kB/s]
+[2024-08-07T15:37:54.992-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  21%|##1       | 180k/857k [00:16<01:03, 10.6kB/s]
+[2024-08-07T15:37:57.775-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  25%|##4       | 210k/857k [00:19<01:00, 10.7kB/s]
+[2024-08-07T15:38:00.517-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  28%|##8       | 240k/857k [00:22<00:57, 10.7kB/s]
+[2024-08-07T15:38:03.627-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  32%|###1      | 270k/857k [00:25<00:56, 10.4kB/s]
+[2024-08-07T15:38:06.487-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  35%|###5      | 300k/857k [00:28<00:53, 10.4kB/s]
+[2024-08-07T15:38:09.343-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  39%|###8      | 330k/857k [00:31<00:50, 10.5kB/s]
+[2024-08-07T15:38:12.080-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet:  42%|####2     | 360k/857k [00:33<00:46, 10.6kB/s]
+[2024-08-07T15:38:13.403-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet: 100%|##########| 857k/857k [00:35<00:00, 69.5kB/s]
+[2024-08-07T15:38:13.527-0300] {logging_mixin.py:188} WARNING - DOSP2020.parquet: 100%|##########| 857k/857k [00:35<00:00, 24.2kB/s]
+[2024-08-07T15:38:13.527-0300] {logging_mixin.py:188} INFO - Erro ao processar UF SP e ano 2020: 'ParquetSet' object is not iterable
+[2024-08-07T15:38:13.528-0300] {python.py:237} INFO - Done. Returned value was: {'SP': None}
+[2024-08-07T15:38:13.528-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:38:13.552-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=baixar_SIM_SP_2020, run_id=manual__2024-08-07T18:36:41.214615+00:00, execution_date=20240807T183641, start_date=20240807T183718, end_date=20240807T183813
+[2024-08-07T15:38:13.610-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:38:13.625-0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:38:13.625-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

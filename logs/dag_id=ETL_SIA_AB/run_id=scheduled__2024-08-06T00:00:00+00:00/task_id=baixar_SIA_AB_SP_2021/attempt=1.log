@@ -1,0 +1,18 @@
+[2024-08-07T15:28:19.242-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:28:19.259-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIA_AB.baixar_SIA_AB_SP_2021 scheduled__2024-08-06T00:00:00+00:00 [queued]>
+[2024-08-07T15:28:19.264-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIA_AB.baixar_SIA_AB_SP_2021 scheduled__2024-08-06T00:00:00+00:00 [queued]>
+[2024-08-07T15:28:19.264-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:28:19.281-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIA_AB_SP_2021> on 2024-08-06 00:00:00+00:00
+[2024-08-07T15:28:19.285-0300] {standard_task_runner.py:63} INFO - Started process 1834 to run task
+[2024-08-07T15:28:19.289-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIA_AB', 'baixar_SIA_AB_SP_2021', 'scheduled__2024-08-06T00:00:00+00:00', '--job-id', '1034', '--raw', '--subdir', 'DAGS_FOLDER/ETL_SIA_AB.py', '--cfg-path', '/tmp/tmp8fn1vza1']
+[2024-08-07T15:28:19.292-0300] {standard_task_runner.py:91} INFO - Job 1034: Subtask baixar_SIA_AB_SP_2021
+[2024-08-07T15:28:19.340-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIA_AB.baixar_SIA_AB_SP_2021 scheduled__2024-08-06T00:00:00+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:28:19.603-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIA_AB' AIRFLOW_CTX_TASK_ID='baixar_SIA_AB_SP_2021' AIRFLOW_CTX_EXECUTION_DATE='2024-08-06T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-08-06T00:00:00+00:00'
+[2024-08-07T15:28:19.604-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:28:23.723-0300] {logging_mixin.py:188} INFO - Erro ao processar UF SP e ano 2021: not enough values to unpack (expected 2, got 1)
+[2024-08-07T15:28:23.729-0300] {python.py:237} INFO - Done. Returned value was: {'SP': None}
+[2024-08-07T15:28:23.730-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:28:23.752-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIA_AB, task_id=baixar_SIA_AB_SP_2021, run_id=scheduled__2024-08-06T00:00:00+00:00, execution_date=20240806T000000, start_date=20240807T182819, end_date=20240807T182823
+[2024-08-07T15:28:23.783-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:28:23.811-0300] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:28:23.812-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

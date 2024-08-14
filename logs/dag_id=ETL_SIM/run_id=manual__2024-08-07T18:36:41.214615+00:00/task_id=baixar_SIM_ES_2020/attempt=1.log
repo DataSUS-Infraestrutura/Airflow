@@ -1,0 +1,40 @@
+[2024-08-07T15:39:33.377-0300] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-08-07T15:39:33.392-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_ES_2020 manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:39:33.401-0300] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: ETL_SIM.baixar_SIM_ES_2020 manual__2024-08-07T18:36:41.214615+00:00 [queued]>
+[2024-08-07T15:39:33.402-0300] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-08-07T15:39:33.424-0300] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): baixar_SIM_ES_2020> on 2024-08-07 18:36:41.214615+00:00
+[2024-08-07T15:39:33.433-0300] {standard_task_runner.py:63} INFO - Started process 13159 to run task
+[2024-08-07T15:39:33.437-0300] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'ETL_SIM', 'baixar_SIM_ES_2020', 'manual__2024-08-07T18:36:41.214615+00:00', '--job-id', '1052', '--raw', '--subdir', 'DAGS_FOLDER/ETL_DO.py', '--cfg-path', '/tmp/tmpnhvwkd24']
+[2024-08-07T15:39:33.440-0300] {standard_task_runner.py:91} INFO - Job 1052: Subtask baixar_SIM_ES_2020
+[2024-08-07T15:39:33.474-0300] {task_command.py:426} INFO - Running <TaskInstance: ETL_SIM.baixar_SIM_ES_2020 manual__2024-08-07T18:36:41.214615+00:00 [running]> on host LAPTOP-NDHI6BI3.
+[2024-08-07T15:39:33.697-0300] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='ETL_SIM' AIRFLOW_CTX_TASK_ID='baixar_SIM_ES_2020' AIRFLOW_CTX_EXECUTION_DATE='2024-08-07T18:36:41.214615+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-08-07T18:36:41.214615+00:00'
+[2024-08-07T15:39:33.698-0300] {taskinstance.py:430} INFO - ::endgroup::
+[2024-08-07T15:39:35.729-0300] {logging_mixin.py:188} WARNING -   0%|          | 0/1 [00:00<?, ?it/s]
+[2024-08-07T15:39:35.730-0300] {logging_mixin.py:188} WARNING -   0%|          | 0.00/2.40M [00:00<?, ?B/s]
+[2024-08-07T15:39:35.730-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:   0%|          | 0.00/2.40M [00:00<?, ?B/s]
+[2024-08-07T15:39:36.304-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:   0%|          | 5.79k/2.40M [00:00<03:57, 10.1kB/s]
+[2024-08-07T15:39:36.441-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:   1%|1         | 25.6k/2.40M [00:00<00:53, 44.2kB/s]
+[2024-08-07T15:39:36.588-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:   3%|2         | 66.1k/2.40M [00:00<00:21, 109kB/s] 
+[2024-08-07T15:39:36.726-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:   5%|5         | 130k/2.40M [00:00<00:11, 206kB/s] 
+[2024-08-07T15:39:36.860-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:   9%|9         | 217k/2.40M [00:01<00:06, 327kB/s]
+[2024-08-07T15:39:36.996-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  16%|#5        | 382k/2.40M [00:01<00:03, 581kB/s]
+[2024-08-07T15:39:37.139-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  25%|##4       | 598k/2.40M [00:01<00:02, 860kB/s]
+[2024-08-07T15:39:37.286-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  36%|###5      | 858k/2.40M [00:01<00:01, 1.14MB/s]
+[2024-08-07T15:39:37.433-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  47%|####6     | 1.12M/2.40M [00:01<00:00, 1.34MB/s]
+[2024-08-07T15:39:37.592-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  58%|#####7    | 1.38M/2.40M [00:01<00:00, 1.44MB/s]
+[2024-08-07T15:39:37.754-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  69%|######8   | 1.65M/2.40M [00:02<00:00, 1.49MB/s]
+[2024-08-07T15:39:37.908-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  80%|#######9  | 1.91M/2.40M [00:02<00:00, 1.56MB/s]
+[2024-08-07T15:39:38.052-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:  90%|######### | 2.17M/2.40M [00:02<00:00, 1.63MB/s]
+[2024-08-07T15:39:38.196-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc: 100%|##########| 2.40M/2.40M [00:02<00:00, 1.62MB/s]
+[2024-08-07T15:39:38.197-0300] {logging_mixin.py:188} WARNING - DOES2020.dbc:   0%|          | 0.00/1.00 [00:00<?, ?B/s]          
+[2024-08-07T15:39:38.197-0300] {logging_mixin.py:188} WARNING - DOES2020.dbf:   0%|          | 0.00/1.00 [00:00<?, ?B/s]
+[2024-08-07T15:39:38.334-0300] {logging_mixin.py:188} WARNING - DOES2020.dbf:   0%|          | 0.00/71.3k [00:00<?, ?B/s]
+[2024-08-07T15:39:38.334-0300] {logging_mixin.py:188} WARNING - DOES2020.parquet:   0%|          | 0.00/71.3k [00:00<?, ?B/s]
+[2024-08-07T15:39:41.711-0300] {logging_mixin.py:188} WARNING - DOES2020.parquet: 100%|##########| 71.3k/71.3k [00:03<00:00, 21.1kB/s]
+[2024-08-07T15:39:41.711-0300] {logging_mixin.py:188} INFO - Erro ao processar UF ES e ano 2020: 'ParquetSet' object is not iterable
+[2024-08-07T15:39:41.712-0300] {python.py:237} INFO - Done. Returned value was: {'ES': None}
+[2024-08-07T15:39:41.712-0300] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-08-07T15:39:41.730-0300] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=ETL_SIM, task_id=baixar_SIM_ES_2020, run_id=manual__2024-08-07T18:36:41.214615+00:00, execution_date=20240807T183641, start_date=20240807T183933, end_date=20240807T183941
+[2024-08-07T15:39:41.796-0300] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-08-07T15:39:41.818-0300] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-07T15:39:41.824-0300] {local_task_job_runner.py:222} INFO - ::endgroup::

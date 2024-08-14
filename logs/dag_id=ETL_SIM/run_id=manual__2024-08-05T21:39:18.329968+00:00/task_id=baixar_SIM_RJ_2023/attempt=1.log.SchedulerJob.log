@@ -1,0 +1,1 @@
+[2024-08-05T18:41:47.885-0300] {scheduler_job_runner.py:843} ERROR - Executor reports task instance <TaskInstance: ETL_SIM.baixar_SIM_RJ_2023 manual__2024-08-05T21:39:18.329968+00:00 [queued]> finished (failed) although the task says it's queued. (Info: None) Was the task killed externally?

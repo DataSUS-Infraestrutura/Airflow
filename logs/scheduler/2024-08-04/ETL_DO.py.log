@@ -1,0 +1,35 @@
+[2024-08-04T18:57:57.073-0300] {processor.py:161} INFO - Started process (PID=18471) to work on /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:57:57.074-0300] {processor.py:830} INFO - Processing file /home/jamilsonfs/airflow/dags/ETL_DO.py for tasks to queue
+[2024-08-04T18:57:57.075-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:57:57.075-0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:58:01.498-0300] {processor.py:840} INFO - DAG(s) 'ETL_SIM' retrieved from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:58:01.532-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:58:01.532-0300] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-04T18:58:01.547-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:58:01.547-0300] {dag.py:3954} INFO - Setting next_dagrun for ETL_SIM to 2024-08-03T00:00:00+00:00, run_after=2024-08-04T00:00:00+00:00
+[2024-08-04T18:58:01.569-0300] {processor.py:183} INFO - Processing /home/jamilsonfs/airflow/dags/ETL_DO.py took 4.514 seconds
+[2024-08-04T18:58:32.416-0300] {processor.py:161} INFO - Started process (PID=18938) to work on /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:58:32.418-0300] {processor.py:830} INFO - Processing file /home/jamilsonfs/airflow/dags/ETL_DO.py for tasks to queue
+[2024-08-04T18:58:32.419-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:58:32.418-0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:58:37.790-0300] {processor.py:840} INFO - DAG(s) 'ETL_SIM' retrieved from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:58:37.827-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:58:37.827-0300] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-04T18:58:37.849-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:58:37.849-0300] {dag.py:3954} INFO - Setting next_dagrun for ETL_SIM to 2024-08-03T00:00:00+00:00, run_after=2024-08-04T00:00:00+00:00
+[2024-08-04T18:58:37.876-0300] {processor.py:183} INFO - Processing /home/jamilsonfs/airflow/dags/ETL_DO.py took 5.466 seconds
+[2024-08-04T18:59:08.051-0300] {processor.py:161} INFO - Started process (PID=19352) to work on /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:59:08.052-0300] {processor.py:830} INFO - Processing file /home/jamilsonfs/airflow/dags/ETL_DO.py for tasks to queue
+[2024-08-04T18:59:08.053-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:59:08.053-0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:59:12.955-0300] {processor.py:840} INFO - DAG(s) 'ETL_SIM' retrieved from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:59:12.973-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:59:12.972-0300] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-04T18:59:13.027-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:59:13.027-0300] {dag.py:3954} INFO - Setting next_dagrun for ETL_SIM to 2024-08-03T00:00:00+00:00, run_after=2024-08-04T00:00:00+00:00
+[2024-08-04T18:59:13.161-0300] {processor.py:183} INFO - Processing /home/jamilsonfs/airflow/dags/ETL_DO.py took 5.117 seconds
+[2024-08-04T18:59:46.844-0300] {processor.py:161} INFO - Started process (PID=19891) to work on /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:59:46.850-0300] {processor.py:830} INFO - Processing file /home/jamilsonfs/airflow/dags/ETL_DO.py for tasks to queue
+[2024-08-04T18:59:46.858-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:59:46.857-0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:59:51.995-0300] {processor.py:840} INFO - DAG(s) 'ETL_SIM' retrieved from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T18:59:52.002-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:59:52.001-0300] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-04T18:59:52.021-0300] {logging_mixin.py:188} INFO - [2024-08-04T18:59:52.021-0300] {dag.py:3954} INFO - Setting next_dagrun for ETL_SIM to 2024-08-03T00:00:00+00:00, run_after=2024-08-04T00:00:00+00:00
+[2024-08-04T18:59:52.107-0300] {processor.py:183} INFO - Processing /home/jamilsonfs/airflow/dags/ETL_DO.py took 5.271 seconds
+[2024-08-04T19:01:00.383-0300] {processor.py:161} INFO - Started process (PID=21305) to work on /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T19:01:00.384-0300] {processor.py:830} INFO - Processing file /home/jamilsonfs/airflow/dags/ETL_DO.py for tasks to queue
+[2024-08-04T19:01:00.386-0300] {logging_mixin.py:188} INFO - [2024-08-04T19:01:00.385-0300] {dagbag.py:545} INFO - Filling up the DagBag from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T19:01:08.045-0300] {processor.py:840} INFO - DAG(s) 'ETL_SIM' retrieved from /home/jamilsonfs/airflow/dags/ETL_DO.py
+[2024-08-04T19:01:08.177-0300] {logging_mixin.py:188} INFO - [2024-08-04T19:01:08.177-0300] {dag.py:3096} INFO - Sync 1 DAGs
+[2024-08-04T19:01:08.193-0300] {logging_mixin.py:188} INFO - [2024-08-04T19:01:08.193-0300] {dag.py:3954} INFO - Setting next_dagrun for ETL_SIM to 2024-08-03T00:00:00+00:00, run_after=2024-08-04T00:00:00+00:00
+[2024-08-04T19:01:08.216-0300] {processor.py:183} INFO - Processing /home/jamilsonfs/airflow/dags/ETL_DO.py took 7.841 seconds
