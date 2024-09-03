@@ -338,12 +338,13 @@ with DAG(
         op_kwargs={'parquet_dir': '/home/jamilsonfs/airflow/dados/dados_parquet', 'json_file':'/home/jamilsonfs/airflow/dados/json_files/cid10_data.json'},
     ) 
 
-    #Reunião
+
     atlas_task = AtlasConnectionCheckOperator(
         task_id='atlas_connection',
         atlas_url='http://10.100.100.61:21000/',
         atlas_user='admin',
         atlas_password='admin',
+        
         dag=dag
     )
 
