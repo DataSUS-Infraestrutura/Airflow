@@ -47,7 +47,7 @@ def baixar_arquivos(**kwargs):
 
         bucket_name = 'bronze-delta'
         prefix = 'datasus_sia_delta/ACFMG2001.delta/'
-        download_dir = '/home/jamilsonfs/airflow/dags/SIA/tmp/DELTA'
+        download_dir = '/home/jamilsonfs/airflow/dags/SIH/tmp/DELTA'
         
         # Ensure the base download directory exists
         if not os.path.exists(download_dir):
