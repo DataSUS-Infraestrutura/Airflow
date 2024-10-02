@@ -11,9 +11,8 @@ import json
 import requests
 from requests.auth import HTTPBasicAuth
 
-# Definir estados e anos
-anos = [2021]  # Array para os anos
-estados = ['PB']  # Array para os estados
+anos = [2021]  
+estados = ['PB']  
 
 def verificar_conexao_minio(**kwargs):
     try:
@@ -51,7 +50,6 @@ def baixar_arquivos(**kwargs):
         if not os.path.exists(download_dir):
             os.makedirs(download_dir)
 
-        # Gerar combinações de estados e anos
         for estado, ano in itertools.product(estados, anos):
             prefix = f'datasus_sia_delta/ACF{estado}{str(ano)[-2:]}01.delta/'
             subdir_name = prefix.split('/')[1]
@@ -86,7 +84,7 @@ def converter_delta_df(parquet_dir):
     table = dataset.read()
     
     df = table.to_pandas()
-    print(df.head())  # Exibe as primeiras linhas do dataframe para verificação
+    print(df.head()) 
     return df
 
 def drop_columns_and_save(parquet_dir, json_file):
@@ -129,51 +127,39 @@ def group_transform(parquet_dir, json_file):
                 except Exception as e:
                     print(f"Erro ao processar o arquivo {parquet_file_path}: {e}")
 
-import os
-import requests
-from requests.auth import HTTPBasicAuth
-
 def criar_entidade_atlas(parquet_file_path, atlas_url, atlas_username, atlas_password):
-    # Obter o nome do diretório base, que no seu caso seria algo como 'ACFPB2101.delta'
     directory_name = os.path.basename(os.path.dirname(parquet_file_path))
 
-    # Remover a extensão '.delta' do nome do diretório para gerar 'ACFPB2101'
-    base_name = directory_name.split('.')[0]  # Exemplo: 'ACFPB2101'
+    base_name = directory_name.split('.')[0] 
 
-    # Definir o qualifiedName, name, e filename com base no diretório e não no arquivo parquet
-    qualified_name = f"{base_name}@sia_v1"  # Exemplo: 'ACFPB2101@sim_v1'
-    name = base_name  # Exemplo: 'ACFPB2101'
-    filename = directory_name  # Exemplo: 'ACFPB2101.delta'
+    qualified_name = f"{base_name}@sia_v1"  
+    name = base_name  
+    filename = directory_name  
 
-    # Definir o payload para enviar para o Atlas
     payload = {
         "entity": {
-            "typeName": "file_metadata",  # Tipo de entidade
+            "typeName": "file_metadata",  
             "attributes": {
-                "qualifiedName": qualified_name,  # Exemplo: 'ACFPB2101@sim_v1'
-                "name": name,  # Exemplo: 'ACFPB2101'
-                "description": "Descrição da entidade de teste",  # Descrição
-                "owner": "Airflow",  # Proprietário da entidade
-                "filename": filename  # Exemplo: 'ACFPB2101.delta'
+                "qualifiedName": qualified_name,
+                "name": name, 
+                "description": "Descrição da entidade de teste", 
+                "owner": "Airflow",  
+                "filename": filename  
             }
         }
     }
 
-    # Enviar a requisição POST para o Atlas
     response = requests.post(
         url=f"{atlas_url}/api/atlas/v2/entity",
         json=payload,
         auth=HTTPBasicAuth(atlas_username, atlas_password)
     )
 
-    # Verificar o status da requisição
     if response.status_code == 200:
         print(f"Entidade criada com sucesso: {response.json()}")
     else:
         print(f"Erro ao criar entidade: {response.status_code} - {response.text}")
         response.raise_for_status()
-
-
 
 def criar_entidade_atlas_task(**kwargs):
     parquet_dir = kwargs['parquet_dir']
@@ -189,7 +175,7 @@ def criar_entidade_atlas_task(**kwargs):
 
 # DAG
 with DAG(
-    dag_id='ETL_SIA_AM',
+    dag_id='ETL_SIA_PAR',
     default_args={
         'owner': 'airflow',
         'depends_on_past': False,

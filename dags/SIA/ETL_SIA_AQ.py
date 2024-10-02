@@ -189,7 +189,7 @@ def criar_entidade_atlas_task(**kwargs):
 
 # DAG
 with DAG(
-    dag_id='ETL_SIA_AM',
+    dag_id='ETL_SIA_AQ',
     default_args={
         'owner': 'airflow',
         'depends_on_past': False,
