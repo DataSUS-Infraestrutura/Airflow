@@ -1,0 +1,21 @@
+{
+    "DTOBITO": "Data do Óbito",
+    "HORAOBITO": "Hora do Óbito",
+    "DTNASC": "Data de Nascimento",
+    "TIPOBITO": "Tipo de Óbito",
+    "NATURAL": "Naturalidade",
+    "IDADE": "Idade",
+    "SEXO": "Sexo",
+    "RACACOR": "Raça/Cor",
+    "ESTCIV": "Estado Civil",
+    "ESC": "Escolaridade",
+    "LOCOCOR": "Local da Ocorrência",
+    "CODESTAB": "Hospital",
+    "ASSISTMED": "Assintência Médica",
+    "NECROPSIA": "Necrópsia",
+    "CAUSABAS": "Causa Básica",
+    "CAUSABAS_keep": "Categoria CID",
+    "DTATESTADO": "Data do Atestado",
+    "DTCADASTRO": "Data do Cadastro",
+    "COMUNSVOIM": "Cidade do Paciente"
+}

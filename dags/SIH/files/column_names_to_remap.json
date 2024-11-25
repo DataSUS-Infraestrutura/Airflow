@@ -1,3 +1,20 @@
 {
-    
+    "CGC_HOSP": "CNPJ do Hospital",
+    "ANO_CMPT": "Data de Processamento",
+    "N_AIH": "Número da AIH",
+    "MUNIC_RES": "Cidade do Paciente",
+    "NASC": "Data de Nascimento",
+    "SEXO": "Sexo",
+    "DT_INTER": "Data de Inicio",
+    "DT_SAIDA": "Data de Fim",
+    "DIAG_PRINC": "Causa Básica",
+    "DIAG_PRINC_keep": "Categoria CID",
+    "MUNIC_MOV": "Cidade do Hospital",
+    "IDADE": "Idade",
+    "MORTE": "Obito",
+    "INSTRU": "Escolaridade",
+    "CNPJ_MANT": "CNPJ do Hospital",
+    "RACA_COR": "Raça/Cor",
+    "DIAGSEC1": "Causa Secundaria",
+    "DIAGSEC1_keep": "Categoria CID Secundaria"
 }

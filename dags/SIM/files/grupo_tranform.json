@@ -1,0 +1,104 @@
+[
+    {
+        "id": 0,
+        "column_name": "SEXO",
+        "to_replace": ["0", "1", "2"],
+        "value": ["Ignorado", "Homem", "Mulher"]
+    },
+    {
+        "id": 1,
+        "column_name": "TIPOBITO",
+        "to_replace": ["1", "2"],
+        "value": ["Fetal", "Não Fetal"]
+    },
+    {
+        "id": 2,
+        "column_name": "RACACOR",
+        "to_replace": ["1", "2", "3", "4", "5"],
+        "value": ["Branca", "Preta", "Amarela", "Parda", "Indígena"]
+    },
+    {
+        "id": 3,
+        "column_name": "ESTCIV",
+        "to_replace": ["1", "2", "3", "4", "9"],
+        "value": ["Solteito", "Casado", "Viúvo", "Separado Judicialmente", "Ignorado"]
+    },
+    {
+        "id": 4,
+        "column_name": "ESC",
+        "to_replace": ["1", "2", "3", "4", "5", "9"],
+        "value": ["Nenhuma", "1 a 3 anos", "4 a 7 anos", "8 a 11 anos", "12 a mais", "Ignorado"]
+    },
+    {
+        "id": 5,
+        "column_name": "LOCOCOR",
+        "to_replace": ["1", "2", "3", "4", "5", "9"],
+        "value": ["Hospital", "Outro estado saúde", "Domicílio", "Via Pública", "Outros", "Ignorado"]
+    },
+    {
+        "id": 6,
+        "column_name": "GRAVIDEZ",
+        "to_replace": ["1", "2", "3", "9"],
+        "value": ["Única", "Dupla", "Tripla e mais", "Ignorado"]
+    },
+    {
+        "id": 7,
+        "column_name": "SEMAGESTAC",
+        "to_replace": ["1", "2", "3", "4", "5", "6","9"],
+        "value": ["Menos de 22 semanas", "22 a 27 semanas", "28 a 31 semanas", "32 a 36 semanas", "37 a 41 semanas", "42 semanas e mais", "Ignorado"]
+    },
+    {
+        "id": 8,
+        "column_name": "GESTACAO",
+        "to_replace": ["1", "2", "9"],
+        "value": ["Vaginal", "Cesáreo", "Ignorado"]
+    },
+    {
+        "id": 9,
+        "column_name": "PARTO",
+        "to_replace": ["1", "2", "3", "9"],
+        "value": ["Antes" , "Durante", "Depois", "Ignorado"]
+    },
+    {
+        "id": 9,
+        "column_name": "OBITOPARTO",
+        "to_replace": ["1", "2", "3", "9"],
+        "value": ["Antes" , "Durante", "Depois", "Ignorado"]
+    },
+    {
+        "id": 10,
+        "column_name": "OBITOGRAV",
+        "to_replace": ["1", "2", "9"],
+        "value": ["Sim" , "Não", "Ignorado"]
+    },
+    {
+        "id": 11,
+        "column_name": "OBITOPUERP",
+        "to_replace": ["1", "2", "3", "9"],
+        "value": ["Sim até 42 dias" , "Sim, de 43 dias a 1 ano", "Não", "Ignorado"]
+    },
+    {
+        "id": 12,
+        "column_name": "ASSISTMED",
+        "to_replace": ["1", "2", "9"],
+        "value": ["Sim" , "Não", "Ignorado"]
+    },
+    {
+        "id": 13,
+        "column_name": "EXAME",
+        "to_replace": ["1", "2", "9"],
+        "value": ["Sim" , "Não", "Ignorado"]
+    },
+    {
+        "id": 14,
+        "column_name": "CIRURGIA",
+        "to_replace": ["1", "2", "9"],
+        "value": ["Sim" , "Não", "Ignorado"]
+    },
+    {
+        "id": 15,
+        "column_name": "NECROPSIA",
+        "to_replace": ["1", "2", "9"],
+        "value": ["Sim" , "Não", "Ignorado"]
+    }
+]
